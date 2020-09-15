@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+<h1 class="head">הרשמה</h1>
+קוד:<br><input type="text" formControlName="code" [(ngModel)]="u.code"><br><br>
+<span class="must">*</span>שם:<br><input type="text" formControlName="name" [(ngModel)]="u.name"><br><br>
+כתובת:<br><input type="text" formControlName="address" [(ngModel)]="u.address"><br><br>
+<span class="must">*</span>מייל:<br><input type="email" formControlName="mail" [(ngModel)]="u.mail"><br><br>
+<span class="must">*</span>סיסמה:<br><input type="password" formControlName="password" [(ngModel)]="u.password"><br><br>
+<input type="submit" [disabled]="!form.valid" value="הירשם" (click)="adduser()" >
+<input type="button" value="הראה" (click)="showUser()" ><br><br>
+<div *ngFor="let x of arr">
+    user:{{x.name}}
+</div>
+</form>

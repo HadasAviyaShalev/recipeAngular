@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!--<link rel="stylesheet" href="C:\Users\hadas\Documents\לימודים\אנגולר\project\project\src\app\app.component.css">-->
+  </head>
+<body>
+
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="text-align: right;">
+
+
+  <nav class="navbar navbar-inverse bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <h1 class="display-4 head" style="color:coral;">לבשל בכיף</h1>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a class="nav-link" routerLink="register" routerLinkActive="mycls"><img src="../assets/pictures/registericon.png" height="30" width="30"> הרשמה</a></li>
+        <li><a class="nav-link" routerLink="login" routerLinkActive="mycls"><img src="../assets/pictures/loginicon.png" height="30" width="30"> כניסה</a></li>
+        <li><a class="nav-link" routerLink="all" routerLinkActive="mycls"><img src="../assets/pictures/recipeicon.png" height="30" width="30"> מתכונים</a></li>
+        <li><a class="nav-link" routerLink="logout" routerLinkActive="mycls"> <img src="../assets/pictures/logouticon.svg" height="30" width="30"> יציאה</a></li>
+      </ul>
+    </div>
+  </nav>
+</nav>
+<label>{{user}}</label>
+<div class="container">
+<router-outlet></router-outlet>
+</div>
+</body>
+</html>

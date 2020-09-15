@@ -1,0 +1,18 @@
+
+<label class="use">{{showuser}}</label>
+<h1 class="head">כל המתכונים</h1>
+<input type="button"  *ngIf="exist" value="הוספת מתכון" (click)="addRecipe()" class="addr">
+<div>
+    <span>סינון</span>
+    לפי שם:<input type="text" [(ngModel)]="level">
+    לפי קטגוריה:<select id="cate" [(ngModel)]="cate" >
+     <option value="{{x.name}}" *ngFor="let x of categoryArr">{{x.name}}</option>
+    </select> 
+    לפי משך הכנה:<input type="number" min="0" [(ngModel)]="time" >
+    <input type="button" value="סנן" (click)="getRecipe()">
+    <input type="button" value="נקה סינון" (click)="clean()"><br>
+    <label [ngModel]="result">{{result}}</label>
+  </div>
+<div class="row">
+<app-recipe-details class="col-lg-4 col-md-6 col-sm-12" *ngFor="let x of arr" [myarr]="x"></app-recipe-details>
+</div>

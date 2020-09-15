@@ -1,0 +1,29 @@
+<label class="use" >{{showuser}}</label>
+<form [formGroup]="add">
+<h1 class="head">הוסף מתכון</h1>
+<span class="must">*</span>שם מתכון:<br><input type="text" placeholder="אותיות בלבד" name="a" [(ngModel)]="r.recipeName" formControlName="fname"><br>
+<span class="must">*</span>קטגוריה:<br><select id="cate" [(ngModel)]="r.categotyRecipe.name" name="b" formControlName="category" > (ngModelChange)="findCategory()"
+    <option *ngFor="let x of categoryArr" >{{x.name}}</option>
+</select><br>
+זמן הכנה בדקות:<br><input type="number" formControlName="time" name="t" name="c" [(ngModel)]="r.makingTime"><br> 
+<!--  -->
+רמה:<br><div>
+1<input type="radio" name="level" value="1" id="1" (change)="onSelectionChange(1)"><br>
+2<input type="radio" name="level" value="2" id="2" (change)="onSelectionChange(2)"><br>
+3<input type="radio" name="level" value="3" id="3" (change)="onSelectionChange(3)"><br>
+</div>
+</form>
+מצרכים:<br><div id="products" > 
+    
+    <div *ngFor="let x of r.ingridience;let i=index;trackBy:trackByFn">   
+    ☕
+    <input type="text" [(ngModel)]="r.ingridience[i]" (input)="addRowIngridience(i)"><br> 
+    </div></div><br>
+הוראות הכנה:<div id="make">
+    <div *ngFor="let x of r.makingMethod;let i=index;trackBy:trackByFn">   
+        👩‍🍳  
+    <input type="text" (input)="addRowMaking(i)" [(ngModel)]="r.makingMethod[i]" size="70" >
+</div></div><br>
+הוספת תמונה:<input type="file" [(ngModel)]="r.picture" ><br>
+
+<input type="button" value="הוסף מתכון" (click)="addRecipe()" [disabled]="!add.valid">

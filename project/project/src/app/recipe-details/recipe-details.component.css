@@ -1,0 +1,26 @@
+.card{
+     margin-top: 10px;
+     margin-left: 10px;
+     height: 500px;
+     background-color:transparent;
+     border: sandybrown 4px solid;
+     overflow: hidden;
+     word-wrap: inherit;
+    } 
+img{
+    margin:auto;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    transition: all 0.3s;
+    max-width: 100%;
+    max-height: 100%;
+}
+a{
+    color: coral;
+    background-color: wheat;
+}
+a:hover{
+    color: red;
+}

@@ -1,0 +1,14 @@
+<label class="use">{{showuser}}</label>
+<body>
+<input type="button" *ngIf="exist" value="ערוך מתכון" (click)="editRecipe()">
+<h1 class="display-2">{{r?.recipeName}}</h1>
+<h3>קטגוריה:{{r?.categotyRecipe.name}}</h3>
+<h3 style="float: right;">זמן הכנה: </h3>
+<h3 style="direction: ltr;">{{r?.makingTime|Minit}}</h3>
+<h3>רמה:{{r?.level|difficulty}}</h3>
+<h3>תאריך העלאה:{{r?.date| date: 'dd/MM/yyyy'}}</h3>
+<h3>מצרכים:<p *ngFor="let x of r?.ingridience">☕{{x}}</p></h3>
+<h3>אופן ההכנה:<p *ngFor="let x of r?.makingMethod">👩‍🍳{{x}}</p></h3>
+<h3>משתמש:{{r?.User.name}}</h3>
+<img src="../../assets/{{r.picture}}" *ngIf="r?.picture" height="300px" width="500px">
+</body>

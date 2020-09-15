@@ -1,0 +1,14 @@
+
+<div *ngIf="!exist">
+<form [formGroup]="login">
+<h1 class="head">כניסה</h1>
+ <span  class="must">*</span>שם משתמש:<br>
+ <input type="text" formControlName="name" [(ngModel)]="u.name"><br><br>
+<span class="must">*</span>סיסמה:<br>
+ <input type="password" formControlName="password" [(ngModel)]="u.password"><br><br>
+ <input type="button" [disabled]="!login.valid" value="היכנס" (click)=findUser()>
+</form>
+</div>
+<div *ngIf="exist">
+<h1 class="head" style="margin-top: 20%;">הנך מחובר למערכת!</h1>
+</div>

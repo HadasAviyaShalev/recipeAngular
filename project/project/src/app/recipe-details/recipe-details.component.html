@@ -1,0 +1,11 @@
+
+    <div class="card">
+        <h1 class="size_head head card-header" style="background-color: moccasin;" (click)="check()" >{{myarr.recipeName}}</h1>
+        <div class="card-body">
+            <h3>זמן הכנה:</h3>
+            <h3 style="direction: ltr;">{{myarr.makingTime| Minit}}</h3>
+            <h3>רמה:<br>{{myarr.level|difficulty}}</h3>
+        </div>
+        <img class="card-footer" src="../../assets/{{myarr.picture}}" class="rounded">
+        <a (click)="check()" routerLink={{link}}><h5>הקש למתכון</h5></a>
+    </div>

@@ -1,0 +1,9 @@
+
+<div *ngIf="goout">
+<h1>האם ברצונך להתנתק?😲</h1>
+<input type="button" value="התנתק" (click)="out()">
+<input type="button" value="ביטול" (click)="no()">
+</div>
+<div *ngIf="in">
+    <h1>אינך מחובר למערכת☹️</h1>
+</div>
